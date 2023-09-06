@@ -20,7 +20,7 @@ def compare(m_lst):
 lst = list(input("Введите строку: ")) # вводим строку
 
 # если в массиве есть хотя бы 1 элемент, stack = True, иначе False
-if compare(lst):
+if len(lst)==0 or compare(lst):
     print("Строка не существует")
 else:
     print("Строка существует")
