@@ -1,7 +1,11 @@
 def check(m_lst):
     brackets = []           # стек для хранения открывающих скобок
+    if len(m_lst) > 2 and m_lst[-2] in '+-*/':
+        raise ValueError("Некорректный ввод!")
 
     for i in m_lst:
+        if '+)' in ''.join(m_lst) or '-)' in ''.join(m_lst) or '*)' in ''.join(m_lst) or '/)' in ''.join(m_lst):
+            raise ValueError("Некорректный ввод!")
         if i in '([{':              # если символ - открывающая скобка, добавляем ее в стек
             brackets.append(i)
         elif i in ')]}':            # если символ - закрывающая скобка:
@@ -20,10 +24,10 @@ def evaluate_rpn(m_lst):
     for item in m_lst:
         if item in '1234567890':        # если символ - число
             stack_number.append(int(item))
-            fool = 0
+            fool = False
 
         elif item in '+-':            # если символ - плюс или минус
-            fool +=1
+            fool += 1
             if len(stack_symbol) == 0:      # если стек со знаками пуст
                 stack_symbol.append(item)
             else: # в стеке что-то есть
@@ -46,14 +50,13 @@ def evaluate_rpn(m_lst):
                 stack_symbol.append(item)
 
         elif item == '(':             # если символ - (
-            fool = 1; # сразу после скобки знака быть не может
+            # сразу после скобки знака быть не может
             stack_symbol.append(item)
-        elif item == ')':             # если символ - )
+        elif item == ')': # если символ - )
             while stack_symbol[-1] != '(':
                 stack_number.append(stack_symbol[-1])
                 stack_symbol.pop()
             stack_symbol.pop()
-            fool = 0
 
         elif item == '=':             # если символ - равно
             while len(stack_symbol) != 0:    # символы закончились - извлекаем остатки стека
@@ -61,6 +64,7 @@ def evaluate_rpn(m_lst):
                 stack_symbol.pop()
         if fool > 1: # больше одного знака подряд
             raise ValueError("Некорректный ввод!")
+    print(stack_number)
     return stack_number
 
 def calculate(m_lst):
