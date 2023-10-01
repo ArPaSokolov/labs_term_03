@@ -13,4 +13,3 @@ for k in range(1, n + 1):
     print(x.center(width))
     if k > 8:
         print()
-print(width)
