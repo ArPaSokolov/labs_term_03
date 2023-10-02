@@ -1,7 +1,7 @@
 H = 34
 W = 67
 
-M = [[' '] * W for _ in range(H)]
+M = [[' '] * W for x in range(H)]
 
 M[1][W//2] = '*'
 for i in range(H):
