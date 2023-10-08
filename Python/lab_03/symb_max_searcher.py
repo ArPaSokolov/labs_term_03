@@ -37,6 +37,12 @@ input_string = input("Enter a string to search: ")
 count, symbols = search(input_string)
 sorted_symbols, sorted_count = bubble_sort(count, symbols)
 
-# выводим топ 3 самых повторяющихся символов
-for i in range(3):
-    print(f"Symbol '{sorted_symbols[i]}' was met {sorted_count[i]} times") # вывод данных
+# dsdjl
+if len(sorted_symbols) == 3: # если набралось 3
+    # топ 3 самых повторяющихся символов
+    for i in range(3):
+        print(f"Symbol '{sorted_symbols[i]}' was met {sorted_count[i]} times") # вывод данных
+else:
+    # выводим столько, сколько набралось
+    for i in range(len(sorted_symbols)):
+        print(f"Symbol '{sorted_symbols[i]}' was met {sorted_count[i]} times")  # вывод данных
