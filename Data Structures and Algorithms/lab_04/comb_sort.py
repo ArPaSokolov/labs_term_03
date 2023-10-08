@@ -1,9 +1,10 @@
-s = list(map(int, input().split()))
+s = list(map(int, input("Enter list of numbers: ").split()))
 
-gap = len(s)
-while gap > 1:
-    gap = gap // 1.3
-    for i in range(0, len(s)):
-        if s[i] > s[gap]:
-            s[i], s[gap] = s[gap], s[i]
-print(s)
+gap = len(s) - 1
+while gap > 0:
+    for i in range(0, len(s) - gap):
+        if s[i] > s[i + gap]:
+            s[i], s[i + gap] = s[i + gap], s[i]
+    gap = int(gap // 1.25)
+
+print("Sorted list: ", *s)
