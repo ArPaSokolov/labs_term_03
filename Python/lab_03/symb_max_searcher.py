@@ -37,7 +37,7 @@ input_string = input("Enter a string to search: ")
 count, symbols = search(input_string)
 sorted_symbols, sorted_count = bubble_sort(count, symbols)
 
-# dsdjl
+# вывод
 if len(sorted_symbols) == 3: # если набралось 3
     # топ 3 самых повторяющихся символов
     for i in range(3):
