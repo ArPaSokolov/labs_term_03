@@ -23,7 +23,7 @@ finally:
 
 # самый старший
 
-output_file_e = open('kid_eldest.txt', 'w', encoding='utf-8')
+output_file_e = open('kids_eldest.txt', 'w', encoding='utf-8')
 print("Output file 1 opened")
 try: # запись в файл
     output_file_e.write(f"Фамилия: {max_data[0]}\n")
@@ -38,7 +38,7 @@ finally:
 
 # самый младший
 
-output_file_y = open('kid_youngest.txt', 'w', encoding='utf-8')
+output_file_y = open('kids_youngest.txt', 'w', encoding='utf-8')
 print("Output file 2 opened")
 try: # запись в файл
     output_file_y.write(f"Фамилия: {min_data[0]}\n")
