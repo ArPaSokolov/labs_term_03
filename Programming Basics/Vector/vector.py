@@ -38,8 +38,8 @@ class Vector:
         new.z = self.x * other.y - self.y * other.x
         return Vector(new.x, new.y, new.z)
 
-    def __or__(self, other): # коллинеарность
-        return self.x / other.x == self.y / other.y == self.z / other.z
+    def __or__(a, b): # коллинеарность
+        return abs(a ^ b) == 0
 
     @staticmethod
     def triple_product(a, b, c): # смешанное произведение
