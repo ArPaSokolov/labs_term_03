@@ -1,0 +1,14 @@
+Вино 349 True
+Джем 320 False
+Икра 678 True
+Кофе 369 True
+Лимон 119 True
+Мука 115 False
+Мясо 291 True
+Пиво 125 False
+Рыба 499 True
+Сало 344 False
+Соль 102 False
+Хлеб 120 False
+Хурма 230 False
+Яйца 149 False
