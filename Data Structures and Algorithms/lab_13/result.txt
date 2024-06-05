@@ -1,0 +1,8 @@
+is: is
+sample: sample
+testing.: testing.
+text: text
+file: file
+a: a
+for: for
+This: This
